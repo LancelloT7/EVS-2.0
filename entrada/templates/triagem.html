@@ -1,0 +1,52 @@
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="{% static 'home/img/logo.png' %}" alt="Logo" class="sidebar-logo">
+            
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="{% url 'cadastrar' %}">ENTRADA</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'triagem' %}">TRIAGEM</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">PEÇAS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONSERTO</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">ENDEREÇO</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">SAIDA</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONSULTA POR S/N</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">FOTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONSULTA TOTAL</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'logar' %}">SAIR</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h1>triagem</h1>
+            <div class="row mb-3">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+                </div>
+              </div>
+              <div class="row">
+                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

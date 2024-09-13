@@ -1,0 +1,35 @@
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="{% static 'home/img/logo.png' %}" alt="Logo" class="sidebar-logo">
+            
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="{% url 'cadastrar' %}">ENTRADA</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'triagem' %}">TRIAGEM</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">PEÇAS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONSERTO</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">ENDEREÇO</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">SAIDA</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONSULTA POR S/N</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">FOTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONSULTA TOTAL</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'logar' %}">SAIR</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h1>Conteúdo Principal</h1>
+            <p>Texto da tela principal.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

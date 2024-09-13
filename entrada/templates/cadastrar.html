@@ -1,0 +1,119 @@
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="{% static 'home/img/logo.png' %}" alt="Logo" class="sidebar-logo">
+            
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="{% url 'cadastrar' %}">ENTRADA</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'triagem' %}">TRIAGEM</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">PEÇAS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONSERTO</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">ENDEREÇO</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">SAIDA</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONSULTA POR S/N</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">FOTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONSULTA TOTAL</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'logar' %}">SAIR</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h1>ENTRADA</h1>
+            
+{% load static %}
+{% block 'head' %}
+ <link rel="stylesheet" href="{% static 'usuarios/css/usuarios.css' %}">
+{% endblock 'head' %}
+{% block 'body' %}
+ <div class="container">
+ <br>
+ <br>
+ {% if messages %}
+ {% for message in messages %}
+ <section class="alert {{message.tags}}">
+ {{message}}
+ </section>
+ {% endfor %}
+ {% endif %}
+Aula 1 13
+ <div class="row">
+ <div class="col-md">
+ <form action="" method="">
+ <label>Nome</label>
+ <input type="text" name="nome" placeholder="Digite o nome da sua empresa .
+ <br>
+ <label>Cnpj</label>
+ <input type="text" name="cnpj" placeholder="Digite o seu CNPJ ..." class="f
+ <br>
+ <label>Site</label>
+ <input type="text" name="site" placeholder="Digite o seu site ..." class="f
+ <br>
+ <label>A quanto tempo a startup existe ?</label>
+ <select name="tempo_existencia" class="form-select">
+ <option value="">T 1</option>
+ </select>
+ <br>
+ <label>Descreva a sua empresa</label>
+ <textarea name="descricao" class="form-control"></textarea>
+ <br>
+ <label>Data final para captação</label>
+ <input type="date" name="data_final" class="form-control">
+ <br>
+ <label>Qual a porcentagem (%) de equity oferecida em contrapartida ao valor
+ <input type="number" name="percentual_equity" class="form-control">
+ <input type="submit" class="btn btn-lg btn-indigo" value="cadastrar">
+ </div>
+ <div class="col-md">
+ <br>
+ <label>Qual o estágio da empresa ?</label>
+ <br>
+ <br>
+ <input type="checkbox" name="estagio" value="I"><span>&nbsp&nbsp Tenho apen
+ <br>
+ <input type="checkbox" name="estagio" value="MVP"><span>&nbsp&nbsp Possuo u
+ <br>
+ <input type="checkbox" name="estagio" value="MVPP"><span>&nbsp&nbsp Possuo 
+ <br>
+ <input type="checkbox" name="estagio" value="E"><span>&nbsp&nbsp Empresa pr
+ <br>
+ <br>
+ <label>Qual área sua startup está inseria ?</label>
+ <select name="area" class="form-select">
+ 
+ <option value="">Area 1</option>
+ 
+ </select>
+ <br>
+ <label>Qual seu público alvo</label>
+ <select name="publico_alvo" class="form-select">
+ <option value="BTC">BTC</option>
+ <option value="B2B">B2B</option>
+ </select>
+ <br>
+ <label>Qual valor deseja captar ?</label>
+ <input type="number" name="valor" class="form-control">
+ <br>
+Aula 1 14
+ <label>Envie o pitch de apresentação</label>
+ <input type="file" name="pitch" class="form-control">
+ <br>
+ <label>Envie a logo da empresa</label>
+ <input type="file" name="logo" class="form-control">
+ </form>
+ </div>
+ </div>
+ </div>
+{% endblock 'body' %}
+        </div>
+    </div>
+</div>
+{% endblock %}

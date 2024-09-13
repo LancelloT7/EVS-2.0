@@ -1,0 +1,65 @@
+/* home.css */
+
+/* Estilo da Sidebar */
+.sidebar {
+    background-color: #000; /* Preto */
+    width: 230px; /* Largura fixa para a sidebar */
+    height: 100vh; /* Altura total da tela */
+    padding: 20px; /* Espaçamento interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza itens horizontalmente */
+    position: fixed; /* Fixar a sidebar na lateral */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura da tela */
+}
+
+/* Estilo da Logo na Sidebar */
+.sidebar-logo {
+    width: 80px; /* Nova largura da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+}
+/* Estilo do Título da Sidebar */
+.sidebar h2 {
+    color: #fff; /* Texto branco */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    font-size: 15px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilo da Navegação na Sidebar */
+.sidebar .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ocupa toda a largura disponível */
+    gap: 40px; /* Adiciona espaçamento entre os itens de navegação */
+}
+
+/* Estilo dos Links na Sidebar */
+.sidebar .nav-link {
+    color: #fff; /* Texto branco */
+    padding: 12px 30px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 15px; /* Tamanho da fonte */
+    width: 100%; /* Ocupa toda a largura disponível */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* Estilo do Link da Sidebar ao Passar o Mouse */
+.sidebar .nav-link:hover {
+    background-color: #333; /* Cor de fundo ao passar o mouse */
+    color: #87CEEB; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo do Conteúdo Principal */
+.content {
+    margin-left: 250px; /* Deixa espaço para a sidebar */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f0f0f0; /* Fundo branco acinzentado */
+    height: 93vh; /* Altura total da tela */
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura da tela */
+}

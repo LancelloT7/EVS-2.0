@@ -1,0 +1,99 @@
+:root {
+    --main-color:#007bff; /* Cor de fundo clara */
+    --dark-color: #0b3d91; /* Cor escura adicional clara */
+    --contrast-color: #107bff; /* Cor de contraste */
+}
+
+body {
+    background-image: url("/static/geral/img/rick.png"); /* Caminho direto da imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: 100vh; /* Faz o fundo ocupar toda a altura da tela */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+    background-color: var(--main-color) !important; /* Fundo escuro */
+}
+
+.bg-color-dark {
+    background-color: var(--main-color);
+}
+
+.p-bold {
+    font-weight: bold;
+}
+
+.color-dark {
+    color: var(--dark-color);
+}
+
+.dark-color {
+    background-color: var(--dark-color);
+    color: white !important;
+}
+
+.centralizar {
+    text-align: center;
+}
+
+/* Estilos para placeholders */
+::-webkit-input-placeholder {
+    color: rgb(196, 196, 196) !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: rgb(196, 196, 196) !important;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: rgb(196, 196, 196) !important;
+}
+
+:-ms-input-placeholder {
+    color: rgb(196, 196, 196) !important;
+}
+
+/* Centralização de formulários e campos */
+.container-form {
+    max-width: 500px; /* Ajuste o tamanho máximo conforme necessário */
+    margin: auto;
+    padding: 20px;
+    background-color: var(--dark-color); /* Cor de fundo escura para o formulário */
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form .centralizar {
+    margin-bottom: 15px;
+}
+
+form input[type="submit"] {
+    align-self: center;
+    background-color: var(--contrast-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3e3e6d; /* Cor de fundo quando o botão está em hover */
+}
+
+a.texto {
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+
+a.texto:hover {
+    text-decoration: underline;
+}

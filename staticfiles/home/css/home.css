@@ -1,0 +1,21 @@
+/* home.css */
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    background-color: #000000;
+    color: #ffffff;
+    height: 100vh;
+    padding: 20px;
+    position: fixed; /* Sidebar fixada à esquerda */
+    width: 200px; /* Largura da sidebar */
+}
+
+.content {
+    margin-left: 220px; /* Espaço suficiente para a sidebar */
+    padding: 20px;
+}
